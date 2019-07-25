@@ -30,6 +30,12 @@ Route::group(['middleware' => ['auth']], function() {
 Route::domain('{account}.jumpercursos.com.br')->group(function () {
     Route::get('/', function ($account) {
         $var = [$account];
-        dd($var);
+        echo '<center>
+				<br /><h2>'.$account.'.jumpercursos.com.br</h2><br /><br /><br /><br />
+				<img src="imagem.png" style="margin:auto;"/>
+              </center>';
+
+
+
     });
 });
