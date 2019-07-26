@@ -34,6 +34,7 @@ class HomeController extends Controller
         $escola = Escola::where('username','=',$account)->get();
 
         if($escola->count() == 1){
+            $escola = $escola[0];
             return view('home',compact('escola'));
         }else{
             return Redirect::to('https://jumpercursos.com.br');
