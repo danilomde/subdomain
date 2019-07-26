@@ -34,11 +34,7 @@ class HomeController extends Controller
         $escola = Escola::where('username','=',$account)->get();
 
         if($escola->count() == 1){
-            echo '<center>
-                <br /><h2>'.$account.'.jumpercursos.com.br</h2><br /><br /><br /><br />
-                <img src="imagem.png" style="margin:auto;"/>
-              </center>';
-
+            return view('home',compact('escola'));
         }else{
             return Redirect::to('https://jumpercursos.com.br');
         }
