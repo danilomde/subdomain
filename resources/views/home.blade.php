@@ -4,3 +4,19 @@
 <br /><br />
 <img src="imagem.png" style="margin:auto;"/>
 </center>;
+
+
+<code>
+	{{$escola->google_code}}
+</code>
+
+
+<code>
+	{{$escola->rd_code}}
+</code>
+
+
+<code>
+	{{$escola->facebook_code}}
+</code>
+
