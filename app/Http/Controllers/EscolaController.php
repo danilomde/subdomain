@@ -52,7 +52,25 @@ class EscolaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'link_site' => 'required',
+            'username' => 'required|unique:escolas',
+            'email' => 'email|required',    
+            'google_code' => 'required',
+            'rd_code' => 'required',
+            'escola' => 'required',
+            'estado' => 'required',
+            'cidade' => 'required',
+            'bairro' => 'required',   
+            'facebook_code'=> 'required'
+        ]);
+
+        $escola = Escola::create($request->input());
+
+
+        return redirect()->route('escolas.index')
+                        ->with('success','Escola criada com sucesso.');
     }
 
     /**
@@ -74,7 +92,8 @@ class EscolaController extends Controller
      */
     public function edit(Escola $escola)
     {
-        //
+        
+        return view('escola.edit', compact('escola'));
     }
 
     /**
@@ -86,7 +105,24 @@ class EscolaController extends Controller
      */
     public function update(Request $request, Escola $escola)
     {
-        //
+        $request->validate([
+            'link_site' => 'required',
+            'username' => 'required|unique:escolas,id,'.$escola->id,
+            'email' => 'email|required',
+            'google_code' => 'required',
+            'rd_code' => 'required',
+            'escola' => 'required',
+            'estado' => 'required',
+            'cidade' => 'required',
+            'bairro' => 'required',   
+            'facebook_code'=> 'required'
+        ]);
+        
+
+        $escola->update($request->input());
+
+        return redirect()->route('escolas.index')
+                        ->with('success','Escola editada com sucesso.');
     }
 
     /**
@@ -97,6 +133,9 @@ class EscolaController extends Controller
      */
     public function destroy(Escola $escola)
     {
-        //
+       $escola->delete();
+
+        return redirect()->route('escolas.index')
+                        ->with('success','Escola deleteda com Sucesso!');
     }
 }

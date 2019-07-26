@@ -3,10 +3,11 @@
 @section('title', 'Escolas')
 
 @section('content_header')
-    <div class="pull-right">
+  <div class="pull-right">
     <a href="{{ url('escolas') }}" class="btn btn-primary  "><i class="fa fa-arrow-left"></i> Voltar</a>
-    
+    <a href="{{ url('escolas/create') }}" class="btn btn-success  "><i class="fa fa-plus"></i> Cadastrar</a>
   </div>
+    
     <h1>Escolas</h1>
 
 
@@ -16,7 +17,7 @@
     <div class="col-md-8">
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Formulário de cadastro</h3>
+          <h3 class="box-title">Formulário de edição</h3>
         </div>
         <!-- /.box-header -->
 

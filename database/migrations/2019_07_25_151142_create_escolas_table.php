@@ -20,7 +20,7 @@ class CreateEscolasTable extends Migration
             $table->string('link_site', 200);    
             $table->string('username', 100);    
             $table->string('email', 100);    
-            $table->string('link_página', 200);    
+                
             $table->longText('google_code');    
             $table->longText('rd_code');   
             $table->longText('facebook_code');   

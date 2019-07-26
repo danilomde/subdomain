@@ -1189,6 +1189,48 @@
         ]
     },
     {
+        "name": "lucascudo/laravel-pt-br-localization",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lucascudo/laravel-pt-BR-localization.git",
+            "reference": "3525b156774a9ab9b8276782b7b9f0d728abdec6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lucascudo/laravel-pt-BR-localization/zipball/3525b156774a9ab9b8276782b7b9f0d728abdec6",
+            "reference": "3525b156774a9ab9b8276782b7b9f0d728abdec6",
+            "shasum": ""
+        },
+        "time": "2019-06-25T12:28:03+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Lucascudo\\LaravelPtBRLocalization\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Cascudo",
+                "email": "lucas.sisau@gmail.com"
+            }
+        ],
+        "description": "Arquivos de linguagem em Português do Brasil (pt-BR) para Laravel >= 5.6"
+    },
+    {
         "name": "mockery/mockery",
         "version": "1.2.2",
         "version_normalized": "1.2.2.0",
