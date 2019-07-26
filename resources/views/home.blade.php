@@ -2,11 +2,11 @@
 <html>
 <head>
 
-{{$escola->rd_code}}
+<!-- {{$escola->rd_code}} -->
 </head>
 
 <body>
-	{{$escola->facebook_code}}
+	<!-- {{$escola->facebook_code}} -->
 
 <center>
 
@@ -14,7 +14,7 @@
 	<img src="imagem.png" style="margin:auto;"/>
 	</center>
 
-{{$escola->google_code}}
+<!-- {{$escola->google_code}} -->
 </body>
 
 </html>
